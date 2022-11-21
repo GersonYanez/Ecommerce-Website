@@ -1,25 +1,29 @@
-@import url('http://fonts.googleapis.com/css2?family=Sparten:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'League Spartan Variable';
+    src: url('LeagueSpartanVariable.woff2') format('woff2-variations');
+    font-weight: 200 900;
+  }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
 
-h1{
+h1 {
     font-size: 50px;
     line-height: 64px;
     color: #222;
 }
 
-h2{
+h2 {
     font-size: 46px;
     line-height: 54px;
     color: #222;
 }
 
-h4{
+h4 {
     font-size: 20px;
     color:#222;
 }
@@ -65,6 +69,7 @@ body {
 #navbar li {
     list-style: none;
     padding: 0 20px;
+    position: relative;
 }
 
 #navbar li a {
@@ -72,5 +77,20 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
+    transition: 0.3s ease;
 }
 
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
